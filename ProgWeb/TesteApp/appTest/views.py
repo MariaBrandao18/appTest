@@ -8,6 +8,6 @@ def index(request):
 def sobre(request):
     return render(request, 'appTest/sobre.html', {})
 
-def lista_produtos(request):
+def listar_produtos(request):
     produtos = Produto.objects.all()
-    return render(request, 'produtos/lista.html', {'produtos': produtos})
+    return render(request, 'appTest/listar_produtos.html', {'listar_produtos': produtos})

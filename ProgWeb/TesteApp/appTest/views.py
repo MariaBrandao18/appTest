@@ -18,4 +18,4 @@ def detalhar_produtos(request, id):
         produtos = Produto.objects.get(pk=id)
     except:
         pass
-    return render(request, 'appTest/listar_produtos.html', {'detalhar_produtos': produtos})
+    return render(request, 'appTest/detalhar_produtos.html', {'produtos': produtos})

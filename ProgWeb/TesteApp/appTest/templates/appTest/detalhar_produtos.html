@@ -1,7 +1,7 @@
-{% extensions 'appTest/base.html' %}
+{% extends 'appTest/base.html' %}
 
 {% block conteudo %}
 <h4>
-    Nome: {{produtos.nome}}    Preco: R$ {{produtos.preco}}
+    Nome: {{produtos.nome}}    <br>Preco: R$ {{produtos.preco}}
 </h4>
 {% endblock %}

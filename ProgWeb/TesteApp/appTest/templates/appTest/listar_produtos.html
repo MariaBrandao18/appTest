@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Listagem de produtos</title>
-    </head>
-    <body>
+{% extends 'appTest/base.html' %}
+
+{% block conteudo %}
+    <ul>
         {% for produto in listar_produtos %}
-        <li>{{ produto.nome }} - R${{ produto.preco }}</li>
+            <li> <a href="{% url 'detalhar_produtos' produto.pk %}"> {{ produto.nome }}</a> - R${{ produto.preco }}</li>
         {% empty %}
-        <li>Nenhum produto encontrado</li>
+            <li>Nenhum produto encontrado</li>
         {% endfor %}
-    </body>
-</html>
+    </ul>
+{% endblock %}

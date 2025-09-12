@@ -11,3 +11,11 @@ def sobre(request):
 def listar_produtos(request):
     produtos = Produto.objects.all()
     return render(request, 'appTest/listar_produtos.html', {'listar_produtos': produtos})
+
+def detalhar_produtos(request, id):
+    produtos = None
+    try:
+        produtos = Produto.objects.get(pk=id)
+    except:
+        pass
+    return render(request, 'appTest/listar_produtos.html', {'detalhar_produtos': produtos})
